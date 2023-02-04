@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO LOAN REQUIREMENT</title>
+</head>
+<body background="static/image1.jpg">
+    <h1> WELCOME LOAN REQUIREMENT</h1>
+    <form method="POST" action="/prediction_loan">
+        <tr>
+            <td>
+                <label>int_rate:</label>
+                <input type="text" name="int_rate">
+                </select>
+            </td>
+            <td>
+                <label>installmentint_rate:</label>
+                <input type="text" name="installment">
+                </select>
+            </td>
+            <td>
+                <label>log_annual_inc:</label>
+                <input type="text" name="log_annual_inc">
+                </select>
+            </td>
+            <td>
+                <label>dti:</label>
+                <input type="text" name="dti">
+                </select>
+            </td>
+        </tr>
+
+        <br>
+        <br>
+
+        <tr>
+            <td>
+                <label>fico:</label>
+                <input type="text" name="fico">
+                </select>
+            </td>
+            <td>
+                <label>days_with_cr_line:</label>
+                <input type="text" name="days_with_cr_line">
+                </select>
+            </td>
+            <td>
+                <label>revol_bal:</label>
+                <input type="text" name="revol_bal">
+                </select>
+            </td>
+            <td>
+                <label>revol_util:</label>
+                <input type="text" name="revol_util">
+                </select>
+            </td>
+        </tr>
+
+        <br>
+        <br>
+
+        <tr>
+            <td>
+                <label>inq_last_6mths:</label>
+                <input type="text" name="inq_last_6mths">
+                </select>
+            </td>
+            <td>
+                <label>delinq_2yrs:</label>
+                <input type="text" name="delinq_2yrs">
+                </select>
+            </td>
+            <td>
+                <label>pub_rec:</label>
+                <input type="text" name="pub_rec">
+                </select>
+            </td>
+            <td>
+                <label>not_fully_paid:</label>
+                <input type="text" name="not_fully_paid">
+                </select>
+            </td>
+        </tr>
+        
+        <br>
+        <br>
+
+
+
+        <tr>
+            <td>
+                <label>purpose</label>
+                <select name="purpose">
+                    <option value="credit_card">credit_card</option>
+                    <option value="educational">educational</option>
+                    <option value="home_improvement">home_improvement</option>
+                    <option value="small_business">small_business</option>
+                </select>
+
+            </td>
+        </tr>
+
+        <br>
+        <br>
+
+        <input type="submit" value="SUBMIT">
+
+        <br>
+
+        <p>YOUR LOAN STATUS IS <b> {{prediction}} </b> </p>
+        
+    </form>
+    
+</body>
+</html>
